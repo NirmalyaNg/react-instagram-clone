@@ -1,0 +1,30 @@
+.imageupload {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+.imageupload__progress {
+  height: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.imageupload__input {
+  padding: 8px 12px;
+  margin-bottom: 10px;
+}
+
+.imageupload__button {
+  margin-top: 10px !important;
+}
+
+@media screen and (max-width: 860px) {
+  .imageupload {
+    width: 80%;
+  }
+}
