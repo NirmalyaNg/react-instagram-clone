@@ -11,14 +11,13 @@ const ImageUpload = ({ username }) => {
 
   const handleChange = (e) => {
     if (e.target.files[0]) {
-      console.log(e.target.files[0]);
       setImage(e.target.files[0]);
     }
   };
 
   const handleUpload = () => {
     // Create a new folder names images in the firebase storage and put the image in that folder
-    if (image && image.name.includes("image/")) {
+    if (image) {
       const uploadTask = storage.ref(`images/${image.name}`).put(image);
 
       uploadTask.on(
@@ -54,7 +53,7 @@ const ImageUpload = ({ username }) => {
         }
       );
     } else {
-      alert("File format not supported.Only images are allowed !");
+      alert("Please choose an image..");
     }
   };
 
