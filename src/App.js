@@ -70,10 +70,12 @@ function App() {
       <div className="app__posts">
         {posts.map(({ id, post }) => (
           <Post
+            postId={id}
             key={id}
             username={post.username}
             caption={post.caption}
             imageUrl={post.imageUrl}
+            user={user}
           />
         ))}
       </div>
